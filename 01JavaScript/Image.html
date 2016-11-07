@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Change Image</title>
+</head>
+<body>
+	<img onclick="changeImg()" src="//lorempixel.com/200/200/sports/1" alt="">
+	
+	<script>
+		var i = 1;
+		function changeImg(){
+			var img = document.getElementsByTagName('img')[0];
+			console.log(img);
+			img.src = "//lorempixel.com/200/200/sports/"+(++i);
+		}
+	</script>
+</body>
+</html>
