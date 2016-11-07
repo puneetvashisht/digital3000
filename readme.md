@@ -13,3 +13,8 @@
 	5. At the end of the day, if you have any query left unresolved, feel free to write me on my mail id: puneetvashisht@gmail.com
 	6. We will have 3 breaks each day. 2 short tea breaks and 1 lunch break.
 	
+#Code assignment 
+	1. Last 2 hours will be practice time each day
+	2. Last 2 days are reserved for application 
+	3. At last day, You will submit your project on given link and we will evaluate your performance basis that project
+
