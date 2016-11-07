@@ -1,0 +1,16 @@
+1. JavaScript
+	variable and datatypes
+	array and objects
+	functions
+		arguments
+		function in function
+		function as object
+		as parameters, callback
+		
+	DOM Manipulation
+	
+	Scope of variables
+	
+	Practicals: 
+		Dynamic Javascript Clock
+		Dynamic Clock with time, day, date, month and year

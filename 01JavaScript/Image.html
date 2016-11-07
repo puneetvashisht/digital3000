@@ -4,13 +4,20 @@
 </head>
 <body>
 	<img onclick="changeImg()" src="//lorempixel.com/200/200/sports/1" alt="">
+	<hr/>
 	
+	<h2>Welcome</h2>
+	<input id="box" type="text" onkeyup="greet()"/>
 	<script>
 		var i = 1;
 		function changeImg(){
 			var img = document.getElementsByTagName('img')[0];
 			console.log(img);
 			img.src = "//lorempixel.com/200/200/sports/"+(++i);
+		}
+		
+		function greet(){
+			document.getElementsByTagName('h2')[0].innerHTML = "Welcome "+ document.getElementById('box').value;
 		}
 	</script>
 </body>
