@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>JS Dynamic Table</title>
+	<style>
+		body{
+			font-size: 1.5em;
+			padding: 20px 50px;
+			background: #ddd;
+		}
+	</style>
+</head>
+<body>
+	<h1>Dynamic Table Demo</h1>
+	<input type="text" id="todo" placeholder="Enter todo"><hr/>
+	<input type="button" value="Add Row" onclick="addRow('dataTable')"/>
+	<input type="button" value="Delete Rows" onclick="deleteRows('dataTable')"/>
+	<table id="dataTable" width="400px" border="1">
+		<tr>
+			<th>Delete</th>
+			<th>Todo</th>
+		</tr>
+	</table>
+	
+	<script>
+		function addRow(tableId){
+			var todo = document.getElementById('todo').value.trim();
+			document.getElementById('todo').value = "";
+			if(todo.length == 0){
+				alert("Add some todo");
+				return false;
+			}
+			console.log(todo);
+			var table = document.getElementById(tableId);
+			console.log(table.rows.length);
+			var rowCount = table.rows.length;
+			// insert row at last 
+			var row = table.insertRow(rowCount);
+			
+			//insert checkbox in first cell
+			var firstCell = row.insertCell(0);
+			var element = document.createElement("input");
+			element.type = "checkbox";
+			element.name = "chkTodo";
+			
+			firstCell.appendChild(element);
+			
+			var secondCell = row.insertCell(1);
+			secondCell.innerHTML = todo;
+		}
+		
+		
+		function deleteRows(tableId){
+			var table = document.getElementById(tableId);
+			var rowCount = table.rows.length;
+			for(var i=0;i<rowCount;i++){
+				var row = table.rows[i];
+				var chkbox = row.cells[0].childNodes[0];
+				
+				if(chkbox !=null && chkbox.checked == true){
+					console.log("checked");
+					table.deleteRow(i);
+					rowCount--;
+					i--;
+					
+				}
+			}
+			
+		}
+	</script>
+</body>
+</html>
