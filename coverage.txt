@@ -14,3 +14,7 @@
 	Practicals: 
 		Dynamic Javascript Clock
 		Dynamic Clock with time, day, date, month and year
+		Dynamic table
+		Validation
+		Javascript CSS
+		CSS
