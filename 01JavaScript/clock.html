@@ -30,18 +30,29 @@
 		<button onclick="stopTimer()">Stop Clock</button>
 		<hr/>
 		<div id="showClock">
-			<h2 id="clock">Clock</h1>
+			<h2 id="clock">Time</h2>
+			<h2 id="day">Day</h2>
+			<h2 id="date">Date</h2>
+			<h2 id="month">Month</h2>
+			<h2 id="year">Year</h2>
 		</div>
 	</div>
 	
 	<script>
 		var myTimer = null;
+		var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"]
 		var myClock = document.getElementById('clock');
 		function timer(){
 			myClock.style.color = "green";
 			var t = new Date();
 //			myClock.innerHTML = t.getHours()+":"+t.getMinutes()+":"+t.getSeconds();
 			myClock.innerHTML = t.toLocaleTimeString();
+			
+			document.getElementById('day').innerHTML = "Day: "+days[t.getDay()];
+			document.getElementById('date').innerHTML = "Date: "+t.getDate();
+			document.getElementById('month').innerHTML = "Month: "+(+t.getMonth()+1);
+			document.getElementById('year').innerHTML = "Year: "+t.getFullYear();
+			
 			myTimer = setTimeout(timer, 1000);
 		}
 		function stopTimer(){
