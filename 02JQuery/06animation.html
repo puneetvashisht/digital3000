@@ -1,0 +1,38 @@
+<html>
+<head>
+	<style>
+		.img{
+			border: 5px solid cornflowerblue;
+			border-radius: 15px;
+		}
+	</style>
+	<title>AnimationDemo</title>
+	<script src="lib/jquery/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#hideImg').click(function(){
+				$('img').hide(2000);
+			})
+			$('#showImg').click(function(){
+				$('img').show(5000);
+			})
+			$('#toggleImg').click(function(){
+				$('img').toggle(3000);
+			})
+			$('#animateImg').click(function(){
+				$('img').animate({width: 250}, 5000, function(){
+					$(this).addClass('img');
+				})
+			})
+		})
+	</script>
+</head>
+<body>
+	<button id="hideImg">Hide</button>
+	<button id="showImg">Show</button>
+	<button id="toggleImg">Toggle</button>
+	<button id="animateImg">Animate</button>
+	<br/>
+	<img src="./lib/images/deleteIcon.jpg" />
+</body>
+</html>

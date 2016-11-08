@@ -1,0 +1,41 @@
+<html>
+<head>
+	<style>
+		span{
+			color: magenta;
+		}
+	</style>
+	<title>Validation</title>
+	<script src="lib/jquery/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	<h1>Validation demo</h1>
+	<form action="/mywebsite">
+		<input type="text" placeholder="Enter your userid" />
+		<span></span>
+		<br/>
+		<input type="submit" value="Validate" />
+	</form>
+	<script>
+		$(':submit').click(function(){
+			var hasError = false;
+			var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/
+			
+			var userid = $(':text').val().trim();
+			console.log(userid);
+			if(userid.length == 0){
+				hasError = true;
+				$('span').html("Empty field.");
+			} else if(!emailReg.test(userid)){
+				hasError = true;
+				$('span').html("Invalid userid.");
+			} else {
+				hasError = false;
+				$('span').html("");
+			}
+			
+			return !hasError;
+		})
+	</script>
+</body>
+</html>
