@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Nested Selectors Demo</title>
+	<script src="./lib/jquery/jquery-3.1.1.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$("div").css({"border":"1px solid red", "margin":"10px"});
+			// child elements selector
+			$("div#outer p").css({"color":"cornflowerblue", "font-size": "2em"})
+			
+			//direct child selector
+			$("div#outer>p").css({"text-align":"center"})
+			$("div#inner>p").html("I am inner para");
+			$("div#inner>p").css({"color":"blue"})
+			
+
+		})
+	</script>
+</head>
+<body>
+	<p>Para in body</p>
+	<div id="outer">
+		<p>Para in outer div</p>
+		<div id="inner">
+			<p>Para in inner div</p>
+		</div>
+	</div>
+</body>
+</html>

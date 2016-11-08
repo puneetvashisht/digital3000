@@ -20,3 +20,6 @@ PuneetVashisht@gmail.com
 		Validation
 		Javascript CSS
 		CSS
+2. Jquery
+	Syntax
+		cdn

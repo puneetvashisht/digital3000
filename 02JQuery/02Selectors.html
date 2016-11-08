@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Jquery Selectors Demo</title>
+	<script src="lib/jquery/jquery-1.11.0.min.js"></script>
+	<style>
+		.myPwdCss{
+			border-color: red;
+			border-style: dashed;
+			border-width: 2px;
+			background-color: yellow;
+		}
+		.myIdCss{
+			border: 4px solid darkseagreen;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="head" class="firsthead">Login Page</h1>
+	<table>
+		<tbody>
+			<tr>
+				<td>UserId</td>
+				<td><input type="text" placeholder="Enter your email" id="userid" /></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" placeholder="Enter your password" id="pwd" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+		$(document).ready(function(){
+			
+			
+			$(".firsthead").on('click', function(){
+				console.log("You clicked largest head");
+				$(this).css({"color":"green", "font-size":"3em"});
+			})
+			
+			$("*").click(function(){
+				console.log($(this))
+			})
+			
+			$(":text").focusin(function(){
+				console.log("Adding userid");
+				$(this).addClass("myIdCss")
+			});
+			$(":text").focusout(function(){
+				console.log("userid added");
+				$(this).removeClass("myIdCss")
+			});
+			
+			$(":password").focusin(function(){
+				console.log("Adding password");
+				$(":password").addClass("myPwdCss")
+			});
+			$(":password").focusout(function(){
+				console.log("Password added");
+				$(this).removeClass("myPwdCss")
+			});
+		})
+	</script>
+</body>
+</html>
