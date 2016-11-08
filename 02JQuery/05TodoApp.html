@@ -1,0 +1,58 @@
+<html>
+<head>
+	<style>
+		img{
+			width: 20px;
+		}
+	</style>
+	<title>Todo demo</title>
+<!--	<script src="lib/jquery/jquery-3.1.1.min.js"></script>-->
+	<script src="lib/jquery/jquery-1.11.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var tbody = $("#tbody");
+			$("#addTodo").click(function(){
+				var todo = $("#todo").val().trim();
+				if(todo.length == 0){
+					return false;
+				}
+				$("#todo").val("");
+				console.log(todo);
+				var row = $("<tr>");
+				row.append($("<td>").html(todo))
+//				row.append($("<td>").html("<button>DeleteMe</button>"))
+				row.append($("<td>").html("<img src='./lib/images/deleteIcon.jpg' />"))
+				row.appendTo(tbody);
+				
+				$("img").click(function(){
+					console.log($(this).parent().parent());
+//					$(this).parent().parent().remove();
+					$(this).closest('tr').remove();
+				})
+			$("#tbody tr:nth-child(odd)").css({"background":"darkseagreen"})
+			$("#tbody tr:nth-child(even)").css({"background":"#ddd"})
+			})
+			
+			
+			$('h1').css({"text-align":"center"});
+		})
+	</script>
+</head>
+<body>
+	<h1>Todo App</h1>
+	<input type="text" placeholder="Enter new todo" id="todo"/>
+	<input type="button" value="Add todo" id="addTodo"/>
+	<hr/>
+	<h2>Todo List</h2>
+	<table id="todoTable" border="1" width="80%">
+		<thead>
+			<tr>
+				<th>Todo</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody id="tbody">
+		</tbody>
+	</table>
+</body>
+</html>
