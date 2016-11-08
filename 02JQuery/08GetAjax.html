@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Ajax Get Demo</title>
+	<script src="lib/jquery/jquery-3.1.1.min.js"></script>
+<!--	<script src="lib/jquery/jquery-1.11.0.min.js"></script>-->
+</head>
+<body>
+	<h1>Login page</h1>
+	<form>
+		<label>Username</label>
+		<input type="text" placeholder="Enter username" />
+		<br/>
+		<label>Password</label>
+		<input type="password" placeholder="Enter username" />
+		<br/>
+		<input type="button" value="Submit"/>
+	</form>
+		<img src="lib/images/Loading_icon.gif" width="200px"/>
+	
+	
+	
+	<script>
+		$('img').hide();
+		$(":button").click(function(){
+			$('img').show(2000);
+			$('form').hide(2000);
+			var user = $(':text').val().trim();
+			var pwd = $(':password').val().trim();
+			
+/*
+			$.get("dummy/login.json", 
+				  {"username":user, "password":pwd})
+				.success(function(data){
+					console.log(data);
+				// data = {success: true}
+					if(data.success){
+						$('form').hide(2000);
+						// welcome page
+					}
+				})
+				.error(function(xhr, status, error){
+					console.log(xhr)
+					console.log(status)
+					console.log(error)
+				});
+			
+		})
+*/
+
+			$.ajax({
+				type: "get",
+				url: "dummy/login.json",
+				data: {"username":user, "password":pwd},
+				dataType: 'json',
+				success: function(data){
+					console.log(data);
+				// data = {success: true}
+					if(data.success){
+//						$('form').hide(2000);
+						// welcome page
+						document.write("Welcome user")
+					} else {
+						$('img').hide(2000);
+						$('form').show(2000);		
+					}
+				}, 
+				error: function(xhr, status, error){
+					console.log(xhr)
+					console.log(status)
+					console.log(error)
+			$('img').hide(2000);
+			$('form').show(2000);
+					
+				}
+			})
+		})
+
+		
+	</script>
+</body>
+</html>
