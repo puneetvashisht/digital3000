@@ -21,5 +21,9 @@ PuneetVashisht@gmail.com
 		Javascript CSS
 		CSS
 2. Jquery
-	Syntax
 		cdn
+	Syntax
+	Selectors
+	CSS
+	Dynamic Elements
+	Events

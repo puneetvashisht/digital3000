@@ -1,0 +1,41 @@
+<html>
+<head>
+	<style>
+		.myDivClass{
+			border: 1px solid black;
+			width: 100px;
+			height: 300px;
+		}
+	</style>
+	<title>Dynamic Elements</title>
+	<script src="./lib/jquery/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+//			document.createElement("div");
+			var myDiv = $("<div>");
+			myDiv.attr("id", "newDiv");
+			myDiv.addClass("myDivClass")
+				.css({"background":"darkseagreen"})
+				.append($("<p>").html("I am para1"))
+				.append($("<p>").html("I am para2"))
+				.append($("<p>").html("I am para3"))
+				.append($("<p>").html("I am para4"))
+			$(myDiv).appendTo(document.body);
+			
+			var totalPara = $('#newDiv').find('p').length;
+			console.log(totalPara)
+			$("#newDiv p:first").html("I am changed para")
+			$("#newDiv p:nth-child(3)").html("Third para")
+			$("#newDiv p:nth-child(even)").css({"color":"red"})
+			console.log($("#newDiv p:first").parent())
+			
+			$('p').click(function(){
+				console.log("para clicked")
+			})
+		})
+	</script>
+</head>
+<body>
+	I am Body
+</body>
+</html>
