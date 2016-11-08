@@ -1,3 +1,5 @@
+PuneetVashisht@gmail.com
+
 1. JavaScript
 	variable and datatypes
 	array and objects
