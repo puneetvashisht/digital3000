@@ -4,10 +4,27 @@
 	<script src="lib/angular/angular.min.js"></script>
 	<script>
 		// 1. add module
+		var app = angular.module('myCalc', []);
 		// 2. Add controller
 		// 3. pass scope to controller
+		app.controller('calcCtrl', function($scope){
+			$scope.firstNumber = 0;
+			$scope.secondNumber = 0;
 		// 4. add methods
+			$scope.add = function(){
 		// 5. store result in result
+				$scope.result = $scope.firstNumber + $scope.secondNumber;
+			}
+			$scope.sub = function(){
+				$scope.result = $scope.firstNumber - $scope.secondNumber;
+			}
+			$scope.mul = function(){
+				$scope.result = $scope.firstNumber * $scope.secondNumber;
+			}
+			$scope.div = function(){
+				$scope.result = $scope.firstNumber / $scope.secondNumber;
+			}
+		})
 	</script>
 </head>
 <body ng-app="myCalc">
