@@ -1,1 +1,2 @@
+	<script src="lib/angular/angular.min.js"></script>
 html>(head>title+script)+body

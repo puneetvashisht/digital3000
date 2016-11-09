@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Basic Controller Demo</title>
+	<style>
+		div{
+			border: 2px solid black;
+			width: 200px;
+			height: 100px;
+		}
+	</style>
+	<script src="lib/angular/angular.min.js"></script>
+	<script>
+		//one rootScope is per app
+		function ctrl_1($rootScope, $scope){
+			$rootScope.name = "Arun Kumar";
+			$scope.age = 22;
+		}
+		function ctrl_2($scope, $rootScope){
+			//overriding rootScope.name
+			$rootScope.name = "Puneet Vashsisht";
+			$scope.age = 34;
+		}
+		
+	</script>
+</head>
+<body ng-app>
+	<div ng-controller="ctrl_1">
+		Name: {{name}}<br/>
+		Age: {{age}}
+		<br/>
+	</div>
+	<div ng-controller="ctrl_2">
+		Name: {{name}}<br/>
+		Age: {{age}}
+	</div>
+</body>
+</html>
+

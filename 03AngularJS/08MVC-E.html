@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>MVC Calculator</title>
+	<script src="lib/angular/angular.min.js"></script>
+	<script>
+		// 1. add module
+		// 2. Add controller
+		// 3. pass scope to controller
+		// 4. add methods
+		// 5. store result in result
+	</script>
+</head>
+<body ng-app="myCalc">
+	<div ng-controller="calcCtrl">
+		<label>First Number</label><input type="number" ng-model="firstNumber"/>
+		<br/>
+		<label>Second Number</label><input type="number" ng-model="secondNumber"/>	
+		
+		<hr/>
+		<h2>Result: {{result}}</h2>
+		<hr/>
+		<button ng-click="add()">Add</button>
+		<button ng-click="sub()">Sub</button>
+		<button ng-click="mul()">Mul</button>
+		<button ng-click="div()">Div</button>
+	</div>
+</body>
+</html>

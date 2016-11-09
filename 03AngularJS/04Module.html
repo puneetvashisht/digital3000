@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Angular Modules Demo</title>
+	<script src="lib/angular/angular.min.js"></script>
+	<script>
+		angular.module("myApp", [])
+		.run(function($rootScope){
+			console.log("Module is working");
+			console.log($rootScope)
+			$rootScope.name = "Puneet";
+			$rootScope.age = 34;
+			
+			$rootScope.changeName = function(){
+				$rootScope.name = "Puneet Vashisht"
+			}
+		});
+	</script>
+</head>
+<body>
+	<h1>Name : {{name}}</h1>
+	<div ng-app="myApp">
+		<h1>Name : {{name}}</h1>
+		<h2>Age : {{age}}</h2>
+	<button ng-click="changeName()">Full Name</button>
+	</div>
+	
+</body>
+</html>
+
