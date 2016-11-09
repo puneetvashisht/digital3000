@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title></title>
+	<script src="lib/angular/angular.min.js"></script>
+</head>
+<body ng-app>
+	{{10+20-5}}<br/>
+	{{"puneet" + " " + "Vashisht"}}
+	<hr/>
+	<h2>Basic Calc</h2>
+	<label>FirstNumber</label><input type="number" placeholder="First number" ng-model="fn" />
+	<br/>
+	<label>SecondNumber</label><input type="number" placeholder="Second number" ng-model="sn" />
+	<br/>
+	<h3>Sum : {{fn + sn}}</h3>
+	<h3>Multiply: {{fn * sn}}</h3>
+	<h3>Sub: {{fn - sn}}</h3>
+</body>
+</html>

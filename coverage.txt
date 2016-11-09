@@ -21,9 +21,23 @@ PuneetVashisht@gmail.com
 		Javascript CSS
 		CSS
 2. Jquery
+		javascript library
 		cdn
 	Syntax
 	Selectors
 	CSS
 	Dynamic Elements
 	Events
+	Validation
+	Ajax
+	
+3. AngularJS
+		javascript framwork
+		
+	Syntax
+	Expression
+		Excercise:  priciple amount
+					rate
+					time
+				p * r * time / 100
+					{{simpleInterest}}
