@@ -36,7 +36,8 @@ PuneetVashisht@gmail.com
 		
 	Syntax
 	Expression
-		Excercise:  priciple amount
+		Excercise: 10 min
+					priciple amount
 					rate
 					time
 				p * r * time / 100
