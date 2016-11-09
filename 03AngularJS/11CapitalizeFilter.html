@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Capitalize Demo</title>
+	<script src="lib/angular/angular.min.js"></script>
+	<script>
+		var app = angular.module('app', []);
+		
+		app.filter("capitalize", function(){
+			return function(input){
+				if(input){
+					return input[0].toUpperCase() + input.slice(1).toLowerCase()
+				}
+			}
+		});
+		app.controller('myctrl', function($scope){
+			$scope.list = [
+				{name: 'Puneet', city: 'Tokyo'},
+				{name: 'Arun', city:'Delhi'},
+				{name: 'Batra', city: 'Pune'}
+			]			
+		})
+	</script>
+</head>
+<body ng-app="app" ng-controller="myctrl">
+	{{'ginGer loVEs DoG trEaTs' | lowercase}}<br/>
+	{{'ginGer loVEs DoG trEaTs' | uppercase}}<br/>
+	{{'ginGer loVEs DoG trEaTs' | capitalize}}<br/>
+	{{['a', 'b', 'c', 'd', 'e'] | limitTo:-3}}<br/>
+	Original <hr/> {{list}}<br/>
+	Order By:name<hr/> {{list | orderBy: 'name'}}<br/>
+	Order By:city<hr/> {{list | orderBy: 'city'}}
+</body>
+</html>
