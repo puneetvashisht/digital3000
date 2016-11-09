@@ -63,3 +63,21 @@ PuneetVashisht@gmail.com
 	
 	Excercise: 10 min
 		reverse string filter
+		
+	Directive:
+		ng-app="myApp"
+		ng-model
+		ng-click
+		ng-repeat
+		
+		ng-disabled
+		ng-if
+		ng-show
+		ng-hide
+
+4.
+	HTTP/ server side communication
+	route/spa
+	form validation
+	
+	NodeJS with MongoDB
