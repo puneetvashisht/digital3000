@@ -11,7 +11,7 @@
 					return input[0].toUpperCase() + input.slice(1).toLowerCase()
 				}
 			}
-		});
+		})
 		app.controller('myctrl', function($scope){
 			$scope.list = [
 				{name: 'Puneet', city: 'Tokyo'},
@@ -25,6 +25,7 @@
 	{{'ginGer loVEs DoG trEaTs' | lowercase}}<br/>
 	{{'ginGer loVEs DoG trEaTs' | uppercase}}<br/>
 	{{'ginGer loVEs DoG trEaTs' | capitalize}}<br/>
+
 	{{['a', 'b', 'c', 'd', 'e'] | limitTo:-3}}<br/>
 	Original <hr/> {{list}}<br/>
 	Order By:name<hr/> {{list | orderBy: 'name'}}<br/>

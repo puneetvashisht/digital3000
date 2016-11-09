@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Filter Demo</title>
+	<script src="lib/angular/angular.min.js"></script>
+	<script>
+		var app = angular.module('myModule', []);
+		
+		app.filter('reverse', function(){
+			return function(input){
+					var str = '';
+				if(input){
+					console.log(input.length)
+					console.log(input.charAt(14))
+					var i = input.length-1;
+					while(i>=0){
+						str = str+input.charAt(i)
+						i--;
+					}
+				}
+					return str;
+			}
+		})
+	</script>
+</head>
+<body ng-app="myModule">
+	Reverse String: {{"Puneet Vashisht" | reverse}}
+</body>
+</html>

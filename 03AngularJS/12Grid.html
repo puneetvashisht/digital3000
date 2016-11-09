@@ -33,7 +33,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="user in users | filter: myFilter">
+			<tr ng-repeat="user in users | orderBy:'name'| filter: myFilter">
 				<td>{{user.name}}</td>
 				<td>{{user.role}}</td>
 				<td>{{user.id}}</td>

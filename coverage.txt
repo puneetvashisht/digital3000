@@ -56,4 +56,10 @@ PuneetVashisht@gmail.com
 			// 4. add methods
 			// 5. store result in result
 		
+	Factory/service
+	Filter
+	searchable grid
+	ng-repeat
 	
+	Excercise: 10 min
+		reverse string filter
