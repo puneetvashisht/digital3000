@@ -32,7 +32,7 @@ PuneetVashisht@gmail.com
 	Ajax
 	
 3. AngularJS
-		javascript framwork
+		javascript framework
 		
 	Syntax
 	Expression

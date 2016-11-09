@@ -15,5 +15,16 @@
 	<h3>Sum : {{fn + sn}}</h3>
 	<h3>Multiply: {{fn * sn}}</h3>
 	<h3>Sub: {{fn - sn}}</h3>
+	
+	<hr/>
+	<h2>Simple Interest Calculator</h2>
+	<label>Principle</label><input type="number" placeholder="Principle" ng-model="p" />
+	<br/>
+	<label>Rate</label><input type="number" placeholder="Rete of interest" ng-model="r" />
+	<br/>
+	<label>Time</label><input type="number" placeholder="Time in years" ng-model="t" />
+	<br/>
+	<h3>Simple Interest : {{(p * r * t)/100}}</h3>
+	
 </body>
 </html>
