@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Panel Demo</title>
+<!--	<script src="lib/angular/angular.min.js"></script>-->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script>
+		var app = angular.module('app', []);
+		
+		
+		app.directive('panel', function(){
+			return {
+				templateUrl: "./templates/panelTemp.html",
+				restrict: "E",
+				scope: {
+					title: "@title"
+				},
+				transclude: true,
+				link: function(scope, element, attrs){
+					element.bind('mouseenter', function(){
+						console.log('Mouse entered on panel')
+						element.children().removeClass("panel panel-default")
+						element.children().addClass("panel panel-primary")
+					})
+					
+					element.bind('mouseleave', function(){
+						console.log('Mouse leaving from panel')
+						element.children().removeClass("panel panel-primary")
+						element.children().addClass("panel panel-default")
+					})
+				}
+			}
+		})
+	</script>
+</head>
+<body ng-app="app">
+		<panel title="ReactJS"></panel>
+		<panel title="AngularJS"></panel>
+</body>
+</html>

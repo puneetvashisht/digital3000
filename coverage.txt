@@ -76,6 +76,7 @@ PuneetVashisht@gmail.com
 		ng-hide
 
 4.
+	Custom Directives
 	HTTP/ server side communication
 	route/spa
 	form validation
