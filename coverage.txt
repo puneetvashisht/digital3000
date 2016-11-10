@@ -83,7 +83,35 @@ PuneetVashisht@gmail.com
 	form validation
 	
 	NodeJS with MongoDB
+		intall node
 		Basics
+			Create a new directory
+			open cmd
+			node file.js
+			
+			Server Express
+				open cmd
+				npm init -> package.json
+				npm intall --save express body-parser
+				
+		
 		Node - Express(Server) - Angular - MongoDB
 		
 		MEAN App
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
