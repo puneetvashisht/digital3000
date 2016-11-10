@@ -75,8 +75,7 @@ PuneetVashisht@gmail.com
 		ng-show
 		ng-hide
 
-4.
-	Custom Directives
+4.	Custom Directives
 	HTTP/ server side communication / Ajax
 		jquery: $.ajax({})
 		angular: $http({})
@@ -84,3 +83,7 @@ PuneetVashisht@gmail.com
 	form validation
 	
 	NodeJS with MongoDB
+		Basics
+		Node - Express(Server) - Angular - MongoDB
+		
+		MEAN App
