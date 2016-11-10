@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>Searchable Grid</title>
+	<script src="lib/angular/angular.min.js"></script>
+	<script>
+		var app = angular.module('app', []);
+		
+		app.factory('UserService', function(){
+			return []
+		})
+		
+		app.controller("userCtrl", function($scope, $http, UserService){
+			$scope.users = UserService;
+			
+			$scope.load = function(){
+				$http({
+					method: 'get',
+					url: './dummy/employee.json'
+				}).success(function(data, status){
+					console.log(data)
+					for(var i=0;i<data.length;i++){
+						$scope.users.push(data[i])
+					}
+				}).error(function(){
+					console.log("Some error occurred on server, please try later")
+				})
+			}
+		})
+	</script>
+</head>
+<body ng-app="app" ng-controller="userCtrl">
+
+	<button ng-click="load()">Load Data from server</button>
+	<input type="text" ng-model="myFilter.$">
+	<table border="1" width="80%">
+		<thead>
+			<tr>
+				<th>name</th>
+				<th>role</th>
+				<th>id</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="user in users | orderBy:'name'| filter: myFilter">
+				<td>{{user.name}}</td>
+				<td>{{user.role}}</td>
+				<td>{{user.id}}</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
