@@ -110,7 +110,21 @@ NodeServer
 	Mongodb.MongoClient.conntect
 		
 		
-		
+Project:
+	PollsApp
+		static
+			templates:
+				1. newPoll 					
+					create a form to fill new poll and insert into database (mongodb) and move to #/polls
+				2. poll
+					Question
+						choices with radio button 
+						save button
+							save a counter in db with this particular poll
+					
+						result
+						progress bar
+				3. Polls page
 		
 		
 		
