@@ -97,7 +97,17 @@ PuneetVashisht@gmail.com
 		
 		Node - Express(Server) - Angular - MongoDB
 		
-		MEAN App
+		MEAN App  == >  PollsApp
+		
+		
+
+NodeServer
+	body-parser
+	express
+		static
+			angularJS
+			
+	Mongodb.MongoClient.conntect
 		
 		
 		
