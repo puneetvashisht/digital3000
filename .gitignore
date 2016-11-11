@@ -19,6 +19,7 @@ lib-cov
 /**/kbd.*
 
 /**/pids
+/**/noSql
 /**/logs
 /**/results
 

@@ -92,7 +92,7 @@ PuneetVashisht@gmail.com
 			Server Express
 				open cmd
 				npm init -> package.json
-				npm intall --save express body-parser
+				npm install --save express body-parser
 				
 		
 		Node - Express(Server) - Angular - MongoDB
